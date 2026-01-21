@@ -1,0 +1,19 @@
+define user ask order
+  "Where is my order?"
+  "It is ORD-999."
+  "Check status for ORD-123"
+  "Check status for RET-123"
+  "Where is my order with id ORD-4949?"
+
+# 2. Define the Flow (What the bot should do)
+define flow get order
+  user ask order
+  
+  # Extract the topic from the user's last message
+  $order_id = $last_user_message
+  
+  # EXECUTE the python function (This is what you were missing!)
+  $answer = execute check_order_status(order_id=$order_id)
+  
+  # Send the result back to the user
+  bot $answer

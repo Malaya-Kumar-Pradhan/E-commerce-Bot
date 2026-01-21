@@ -1,0 +1,78 @@
+/* App.css */
+.chat-container {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+}
+
+.chat-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.messages-window {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message-bubble {
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 70%;
+  line-height: 1.4;
+}
+
+/* Different Colors for User vs Bot */
+.message-bubble.user {
+  align-self: flex-end; /* Push to right */
+  background-color: #0084ff;
+  color: white;
+  border-bottom-right-radius: 2px;
+}
+
+.message-bubble.bot {
+  align-self: flex-start; /* Push to left */
+  background-color: #e4e6eb;
+  color: black;
+  border-bottom-left-radius: 2px;
+}
+
+.input-area {
+  display: flex;
+  padding: 15px;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+}
+
+.input-area button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.input-area button:disabled {
+  background-color: #ccc;
+}

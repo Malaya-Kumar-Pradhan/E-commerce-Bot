@@ -1,0 +1,25 @@
+# config/config.yml
+models:
+  - type: main
+    engine: nvidia_ai_endpoints
+    model: meta/llama3-70b-instruct
+
+embeddings:
+  - type: main
+    engine: nvidia_ai_endpoints
+    model: nvidia/nv-embedqa-e5-v5
+
+tools:
+  - name: check_order_status
+    description: "Use this tool to find the shipping status of an order. Input should be the order ID (e.g., ORD-123)."
+    parameters:
+      properties:
+        order_id:
+          type: string
+          description: "The order ID provided by the user (e.g., ORD-123)"
+      required: [order_id]
+
+instructions:
+  - type: general
+    content: |
+      You are an E-commerce Support Bot who will use tool called check_order_status and then return the result.
