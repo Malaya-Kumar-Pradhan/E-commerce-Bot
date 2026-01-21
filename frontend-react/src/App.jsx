@@ -14,7 +14,7 @@ function App() {
     setIsloading(true)
 
     try{
-      const response=await fetch("http://localhost:8000/chat",{
+      const response=await fetch("https://e-commerce-bot-ohxx.onrender.com/chat",{
         method:"POST",
         headers:{"content-type":"application/JSON"},
         body:JSON.stringify({message:userMessage.content})
