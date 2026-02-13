@@ -57,7 +57,7 @@ E-commerce-Bot/
    cp .env.example .env
    ```
    Update the `.env` file with your API keys and configuration:
-   - LLM API keys (OpenAI, etc.)
+   - LLM API keys (NVIDIA AI, etc.)
    - Database credentials
    - Other configuration
 
@@ -110,7 +110,7 @@ E-commerce-Bot/
 - **NemoGuardrails** (0.19.0) - LLM safety guardrails
 - **LangChain** (1.2.3) - LLM orchestration
 - **LangGraph** (1.0.6) - Workflow automation
-- **OpenAI** (2.15.0) - LLM API integration
+- **NVIDIA AI** - LLM API integration
 
 ### Frontend
 - **React** - UI framework
@@ -152,9 +152,8 @@ All requests are processed asynchronously for:
 ## 📦 Key Dependencies
 
 ### AI/ML Stack
-- openai
-- langchain (langchain-openai, langchain-community)
-- langgraph
+- NVIDIA AI
+- llama3-70b-instruct
 - nemoguardrails
 - fastembed
 - onnxruntime
@@ -163,7 +162,6 @@ All requests are processed asynchronously for:
 - fastapi
 - uvicorn
 - httpx
-- starlette
 
 ### Data & Storage
 - pandas
@@ -190,7 +188,7 @@ Create configuration files in the `./config` directory to define:
 ### Environment Variables
 Key variables to configure in `.env`:
 ```
-OPENAI_API_KEY=your_api_key_here
+NVIDIA_API_KEY=your_api_key_here
 DATABASE_URL=your_database_url
 ENVIRONMENT=development
 ```
